@@ -139,9 +139,6 @@ export default async function ArticlePage({
           className="rounded-2xl p-6 mt-8"
           style={{ backgroundColor: config.lightColor }}
         >
-          <h2 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: config.color }}>
-            Liens associés
-          </h2>
           <div className="flex flex-col gap-2">
             {links.map((link, i) => (
               <a
