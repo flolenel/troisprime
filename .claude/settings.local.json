@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/PCDELL004/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/c96504c6-b38b-425e-a871-1b9c8a5e0063/ed8d72ba-aca5-4a70-9766-ebe08e027719/skills/docx/**)",
+      "Bash(pandoc --track-changes=all \"C:\\\\Users\\\\PCDELL004\\\\Desktop\\\\Orouge Box\\\\Cahier_des_charges_site_interne \\(1\\).docx\" -o output.md)",
+      "Bash(python \"C:\\\\Users\\\\PCDELL004\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\c96504c6-b38b-425e-a871-1b9c8a5e0063\\\\ed8d72ba-aca5-4a70-9766-ebe08e027719\\\\skills\\\\docx\\\\scripts\\\\office\\\\unpack.py\" \"C:\\\\Users\\\\PCDELL004\\\\Desktop\\\\Orouge Box\\\\Cahier_des_charges_site_interne \\(1\\).docx\" \"/tmp/docx_unpacked\")",
+      "Bash(pip install defusedxml -q)",
+      "Bash(python3 -c \":*)",
+      "Bash(python -c \":*)",
+      "Bash(python \"C:\\\\Users\\\\PCDELL004\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\c96504c6-b38b-425e-a871-1b9c8a5e0063\\\\ed8d72ba-aca5-4a70-9766-ebe08e027719\\\\skills\\\\docx\\\\scripts\\\\office\\\\unpack.py\" \"C:\\\\Users\\\\PCDELL004\\\\Desktop\\\\Orouge Box\\\\Cahier_des_charges_site_interne \\(1\\).docx\" \"C:\\\\Temp\\\\docx_unpacked\")",
+      "Bash(pip install pdfplumber pypdf pdf2image -q)",
+      "Bash(npm install)",
+      "Bash(node -e \"const v = require\\(''./node_modules/next/package.json''\\).version; console.log\\(''Next.js:'', v\\)\")",
+      "Bash(npm run build)",
+      "Bash(npm install @sanity/vision)",
+      "Bash(npm install @sanity/vision --legacy-peer-deps)",
+      "Bash(npm install styled-components react-is --legacy-peer-deps)",
+      "Bash(npm install @sanity/vision@\"<5.0.0\" --legacy-peer-deps)",
+      "Bash(node -e \"console.log\\(require\\(''./node_modules/@sanity/vision/package.json''\\).version\\)\")",
+      "Bash(node -e \"console.log\\(''sanity:'', require\\(''./node_modules/sanity/package.json''\\).version\\); console.log\\(''@sanity/vision:'', require\\(''./node_modules/@sanity/vision/package.json''\\).version\\)\")",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
