@@ -43,7 +43,7 @@ export const articleSchema = defineType({
         list: [
           { title: 'Veille', value: 'news' },
           { title: "Part'", value: 'part' },
-          { title: 'Créa', value: 'crea' },
+          { title: 'PGI', value: 'crea' },
           { title: 'Outils', value: 'outils' },
         ],
         layout: 'radio',
@@ -196,7 +196,7 @@ export const articleSchema = defineType({
       const categoryLabels: Record<string, string> = {
         news: 'Veille',
         part: "Part'",
-        crea: 'Créa',
+        crea: 'PGI',
         outils: 'Outils',
       }
       const statusEmoji = status === 'published' ? '✅' : '📝'

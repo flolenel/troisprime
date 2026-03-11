@@ -53,6 +53,9 @@ export function CategoryPageContent({ category, articles, tags, currentTag }: Ca
               <span> · Tag : <strong style={{ color: config.color }}>{currentTag}</strong></span>
             )}
           </p>
+          <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+            {config.description}
+          </p>
         </div>
       </div>
 

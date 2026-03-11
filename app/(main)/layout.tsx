@@ -13,7 +13,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           <span className="text-orouge">Trois</span>
           <span className="text-brand-green">Prime</span>
         </span>
-        {' '}— Site interne de veille & partage
+        {' '}— INTERNAL USE ONLY
       </footer>
     </div>
   )

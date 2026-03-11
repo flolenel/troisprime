@@ -39,10 +39,10 @@ export default defineConfig({
                           .filter('_type == "article" && category == "part"')
                       ),
                     S.listItem()
-                      .title('Créa')
+                      .title('PGI')
                       .child(
                         S.documentTypeList('article')
-                          .title('Créa')
+                          .title('PGI')
                           .filter('_type == "article" && category == "crea"')
                       ),
                     S.listItem()
