@@ -29,7 +29,7 @@ export function ArticleCard({ article, onTagClick }: ArticleCardProps) {
 
   useEffect(() => {
     if (!isHovered || !hasMultipleImages) return
-    const interval = setInterval(cycleImage, 700)
+    const interval = setInterval(cycleImage, 1400)
     return () => clearInterval(interval)
   }, [isHovered, hasMultipleImages, cycleImage])
 

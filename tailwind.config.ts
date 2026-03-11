@@ -14,7 +14,7 @@ const config: Config = {
         'brand-gray': '#F1F1F1',
         // Category accent colors
         'cat-news': '#FC431F',
-        'cat-part': '#01525B',
+        'cat-part': '#7C3AED',
         'cat-crea': '#9B2335',
         'cat-outils': '#0E7C8A',
       },

@@ -20,9 +20,9 @@ export const CATEGORY_CONFIG: Record<CategoryId, {
     id: 'part',
     label: "Part'",
     path: '/part',
-    color: '#01525B',
-    lightColor: '#E8F2F3',
-    textColor: '#01525B',
+    color: '#7C3AED',
+    lightColor: '#F3EEFF',
+    textColor: '#7C3AED',
   },
   crea: {
     id: 'crea',
