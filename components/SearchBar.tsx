@@ -33,7 +33,7 @@ export function SearchBar({ initialQuery = '', onClose, autoFocus }: SearchBarPr
       <IconSearch className="absolute left-3 w-4 h-4 text-gray-400 pointer-events-none" />
       <input
         ref={inputRef}
-        type="search"
+        type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Rechercher un article…"
