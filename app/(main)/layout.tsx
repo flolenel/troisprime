@@ -1,9 +1,17 @@
 import '@/app/globals.css'
 import { Navigation } from '@/components/Navigation'
+import ClickSpark from '@/components/ClickSpark'
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <ClickSpark
+      sparkColor="#FC431F"
+      sparkCount={8}
+      sparkSize={12}
+      sparkRadius={22}
+      duration={500}
+      className="min-h-screen flex flex-col"
+    >
       <Navigation />
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
         {children}
@@ -15,6 +23,6 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
         </span>
         {' '}— INTERNAL USE ONLY
       </footer>
-    </div>
+    </ClickSpark>
   )
 }
