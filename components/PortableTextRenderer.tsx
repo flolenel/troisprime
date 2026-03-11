@@ -1,8 +1,8 @@
 import { PortableText } from '@portabletext/react'
 import type { PortableTextBlock } from '@/types'
-import Image from 'next/image'
 import { urlFor } from '@/sanity/lib/image'
 import { IconExternalLink } from './icons'
+import { ClickableImage } from './ClickableImage'
 
 interface PortableTextRendererProps {
   content: PortableTextBlock[]
@@ -68,7 +68,7 @@ const components = {
       if (!value?.asset) return null
       return (
         <figure className="my-6">
-          <Image
+          <ClickableImage
             src={urlFor(value).width(1200).url()}
             alt={value.alt || ''}
             width={1200}

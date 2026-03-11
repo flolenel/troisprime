@@ -1,11 +1,10 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import Image from 'next/image'
 import { getArticleBySlug, getAllArticleSlugs } from '@/sanity/lib/queries'
-import { urlFor } from '@/sanity/lib/image'
 import { CATEGORY_CONFIG } from '@/lib/constants'
 import { CategoryBadge } from '@/components/CategoryBadge'
 import { PortableTextRenderer } from '@/components/PortableTextRenderer'
+import { ArticleImageGallery } from '@/components/ArticleImageGallery'
 import { IconArrowLeft, IconExternalLink } from '@/components/icons'
 
 export const revalidate = 60
@@ -66,32 +65,7 @@ export default async function ArticlePage({
 
       {/* Images */}
       {images && images.length > 0 && (
-        <div className="mb-8">
-          {images.length === 1 ? (
-            <Image
-              src={urlFor(images[0]).width(1200).url()}
-              alt={images[0].alt || title}
-              width={1200}
-              height={900}
-              className="w-full h-auto rounded-2xl shadow-md"
-              priority
-            />
-          ) : (
-            <div className="grid grid-cols-2 gap-3">
-              {images.map((img, i) => (
-                <Image
-                  key={img._key || i}
-                  src={urlFor(img).width(900).url()}
-                  alt={img.alt || title}
-                  width={900}
-                  height={900}
-                  className={`w-full h-auto rounded-2xl shadow-md ${i === 0 ? 'col-span-2' : ''}`}
-                  priority={i === 0}
-                />
-              ))}
-            </div>
-          )}
-        </div>
+        <ArticleImageGallery images={images} title={title} />
       )}
 
       {/* Meta */}
