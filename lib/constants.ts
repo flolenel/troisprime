@@ -10,7 +10,7 @@ export const CATEGORY_CONFIG: Record<CategoryId, {
 }> = {
   news: {
     id: 'news',
-    label: 'News',
+    label: 'Veille',
     path: '/news',
     color: '#FC431F',
     lightColor: '#FEF0ED',

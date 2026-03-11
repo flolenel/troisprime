@@ -17,7 +17,7 @@ export const tagSchema = defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'News', value: 'news' },
+          { title: 'Veille', value: 'news' },
           { title: "Part'", value: 'part' },
           { title: 'Créa', value: 'crea' },
           { title: 'Outils', value: 'outils' },
@@ -34,7 +34,7 @@ export const tagSchema = defineType({
     },
     prepare({ title, subtitle }) {
       const categoryLabels: Record<string, string> = {
-        news: 'News',
+        news: 'Veille',
         part: "Part'",
         crea: 'Créa',
         outils: 'Outils',

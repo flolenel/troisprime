@@ -41,7 +41,7 @@ export const articleSchema = defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'News', value: 'news' },
+          { title: 'Veille', value: 'news' },
           { title: "Part'", value: 'part' },
           { title: 'Créa', value: 'crea' },
           { title: 'Outils', value: 'outils' },
@@ -194,7 +194,7 @@ export const articleSchema = defineType({
     },
     prepare({ title, subtitle, media, status }) {
       const categoryLabels: Record<string, string> = {
-        news: 'News',
+        news: 'Veille',
         part: "Part'",
         crea: 'Créa',
         outils: 'Outils',
