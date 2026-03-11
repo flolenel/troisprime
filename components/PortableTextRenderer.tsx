@@ -68,14 +68,13 @@ const components = {
       if (!value?.asset) return null
       return (
         <figure className="my-6">
-          <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-brand-gray">
-            <Image
-              src={urlFor(value).width(1200).height(675).fit('crop').url()}
-              alt={value.alt || ''}
-              fill
-              className="object-cover"
-            />
-          </div>
+          <Image
+            src={urlFor(value).width(1200).url()}
+            alt={value.alt || ''}
+            width={1200}
+            height={900}
+            className="w-full h-auto rounded-xl"
+          />
           {value.alt && (
             <figcaption className="text-center text-sm text-gray-400 mt-2">{value.alt}</figcaption>
           )}

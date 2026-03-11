@@ -68,32 +68,26 @@ export default async function ArticlePage({
       {images && images.length > 0 && (
         <div className="mb-8">
           {images.length === 1 ? (
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-brand-gray shadow-md">
-              <Image
-                src={urlFor(images[0]).width(1200).height(675).fit('crop').url()}
-                alt={images[0].alt || title}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+            <Image
+              src={urlFor(images[0]).width(1200).url()}
+              alt={images[0].alt || title}
+              width={1200}
+              height={900}
+              className="w-full h-auto rounded-2xl shadow-md"
+              priority
+            />
           ) : (
             <div className="grid grid-cols-2 gap-3">
               {images.map((img, i) => (
-                <div
+                <Image
                   key={img._key || i}
-                  className={`relative rounded-2xl overflow-hidden bg-brand-gray shadow-md ${
-                    i === 0 ? 'col-span-2 aspect-video' : 'aspect-square'
-                  }`}
-                >
-                  <Image
-                    src={urlFor(img).width(900).height(i === 0 ? 506 : 450).fit('crop').url()}
-                    alt={img.alt || title}
-                    fill
-                    className="object-cover"
-                    priority={i === 0}
-                  />
-                </div>
+                  src={urlFor(img).width(900).url()}
+                  alt={img.alt || title}
+                  width={900}
+                  height={900}
+                  className={`w-full h-auto rounded-2xl shadow-md ${i === 0 ? 'col-span-2' : ''}`}
+                  priority={i === 0}
+                />
               ))}
             </div>
           )}
