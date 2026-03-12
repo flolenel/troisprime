@@ -48,7 +48,7 @@ export function Navigation() {
               alt="TroisPrime"
               height={144}
               width={144}
-              className="md:hidden object-contain -ml-5"
+              className="md:hidden object-contain -ml-8"
               priority
             />
           </Link>
