@@ -18,7 +18,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
         {children}
       </main>
       <footer className="border-t border-white/60 py-6 text-center text-sm text-gray-400">
-        <div className="flex items-center justify-center gap-2 mb-1">
+        <div className="flex items-center justify-center gap-3">
           <Image
             src="/TroisPrime.png"
             alt="TroisPrime"
@@ -26,8 +26,8 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
             width={90}
             className="object-contain"
           />
+          <span>FOR INTERNAL USE ONLY</span>
         </div>
-        INTERNAL USE ONLY
       </footer>
     </ClickSpark>
   )
