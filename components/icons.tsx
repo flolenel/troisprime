@@ -3,10 +3,7 @@
 export function IconNews({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="4" width="18" height="16" rx="2" />
-      <line x1="7" y1="9" x2="17" y2="9" />
-      <line x1="7" y1="13" x2="14" y2="13" />
-      <line x1="7" y1="17" x2="11" y2="17" />
+      <path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 2.6-1.4 4.9-3.5 6.2V17a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1.8A7 7 0 0 1 12 2z" />
     </svg>
   )
 }
@@ -14,11 +11,8 @@ export function IconNews({ className }: { className?: string }) {
 export function IconPart({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="18" cy="5" r="3" />
-      <circle cx="6" cy="12" r="3" />
-      <circle cx="18" cy="19" r="3" />
-      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
-      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+      <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v0A2.5 2.5 0 0 1 9.5 7H9a5 5 0 0 0-5 5v0a5 5 0 0 0 5 5h.5A2.5 2.5 0 0 1 12 19.5v0A2.5 2.5 0 0 1 9.5 22H9A9 9 0 0 1 9 4h.5z" />
+      <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v0A2.5 2.5 0 0 0 14.5 7H15a5 5 0 0 1 5 5v0a5 5 0 0 1-5 5h-.5A2.5 2.5 0 0 0 12 19.5v0A2.5 2.5 0 0 0 14.5 22H15A9 9 0 0 0 15 4h-.5z" />
     </svg>
   )
 }
@@ -26,7 +20,8 @@ export function IconPart({ className }: { className?: string }) {
 export function IconCrea({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L18.5 2.5z" />
+      <path d="M15 5l4 4" />
     </svg>
   )
 }
