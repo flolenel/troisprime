@@ -46,9 +46,9 @@ export function Navigation() {
             <Image
               src="/logo-mobile.png"
               alt="TroisPrime"
-              height={144}
-              width={144}
-              className="md:hidden object-contain -ml-8"
+              height={48}
+              width={48}
+              className="md:hidden object-contain"
               priority
             />
           </Link>
