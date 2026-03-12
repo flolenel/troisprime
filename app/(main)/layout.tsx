@@ -1,6 +1,7 @@
 import '@/app/globals.css'
 import { Navigation } from '@/components/Navigation'
 import ClickSpark from '@/components/ClickSpark'
+import Image from 'next/image'
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,11 +18,16 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
         {children}
       </main>
       <footer className="border-t border-white/60 py-6 text-center text-sm text-gray-400">
-        <span className="font-extrabold">
-          <span className="text-orouge">Trois</span>
-          <span className="text-brand-green">Prime</span>
-        </span>
-        {' '}— INTERNAL USE ONLY
+        <div className="flex items-center justify-center gap-2 mb-1">
+          <Image
+            src="/TroisPrime.png"
+            alt="TroisPrime"
+            height={24}
+            width={90}
+            className="object-contain"
+          />
+        </div>
+        INTERNAL USE ONLY
       </footer>
     </ClickSpark>
   )

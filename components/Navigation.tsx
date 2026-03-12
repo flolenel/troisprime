@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { ALL_CATEGORIES } from '@/lib/constants'
 import { SearchBar } from './SearchBar'
@@ -31,11 +32,25 @@ export function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex-shrink-0 font-extrabold text-lg tracking-tight"
+            className="flex-shrink-0"
             onClick={() => setMobileOpen(false)}
           >
-            <span className="text-orouge">Trois</span>
-            <span className="text-brand-green">Prime</span>
+            <Image
+              src="/logo-desktop.png"
+              alt="TroisPrime"
+              height={36}
+              width={140}
+              className="hidden md:block object-contain"
+              priority
+            />
+            <Image
+              src="/logo-mobile.png"
+              alt="TroisPrime"
+              height={32}
+              width={32}
+              className="md:hidden object-contain"
+              priority
+            />
           </Link>
 
           {/* Navigation desktop */}
