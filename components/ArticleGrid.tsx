@@ -40,7 +40,7 @@ export function ArticleGrid({ articles, emptyMessage = 'Aucun article trouvé.' 
             onClick={() => setVisible((v) => v + PAGE_SIZE)}
             className="px-6 py-3 rounded-xl font-semibold text-sm border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white transition-all duration-150"
           >
-            Charger plus ({articles.length - visible} restants)
+            + d'articles ({articles.length - visible} restants)
           </button>
         </div>
       )}
