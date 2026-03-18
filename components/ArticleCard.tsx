@@ -48,7 +48,7 @@ export function ArticleCard({ article, onTagClick }: ArticleCardProps) {
 
   return (
     <article
-      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col md:flex-row md:min-h-[160px]"
+      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col md:flex-row md:min-h-[210px]"
       style={{ borderLeft: `4px solid ${config?.color || '#FC431F'}` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
@@ -79,7 +79,7 @@ export function ArticleCard({ article, onTagClick }: ArticleCardProps) {
       </Link>
 
       {/* Contenu */}
-      <div className="p-4 flex flex-col flex-1 gap-2 min-w-0 md:max-w-[65%]">
+      <div className="p-4 flex flex-col flex-1 gap-2 min-w-0 md:max-w-[55%]">
         {/* Badge + Date */}
         <div className="flex items-center justify-between gap-2">
           <CategoryBadge category={category} />
@@ -119,7 +119,7 @@ export function ArticleCard({ article, onTagClick }: ArticleCardProps) {
       </div>
 
       {/* Image desktop : à droite */}
-      <Link href={`/articles/${slug.current}`} className="hidden md:block relative md:w-[35%] shrink-0 overflow-hidden bg-brand-gray">
+      <Link href={`/articles/${slug.current}`} className="hidden md:block relative md:w-[45%] shrink-0 overflow-hidden bg-brand-gray">
         {currentImage?.asset ? (
           <Image
             src={urlFor(currentImage).width(480).height(320).fit('crop').url()}
