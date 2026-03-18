@@ -1,5 +1,10 @@
+'use client'
+
+import { useState } from 'react'
 import type { Article } from '@/types'
 import { ArticleCard } from './ArticleCard'
+
+const PAGE_SIZE = 12
 
 interface ArticleGridProps {
   articles: Article[]
@@ -7,6 +12,8 @@ interface ArticleGridProps {
 }
 
 export function ArticleGrid({ articles, emptyMessage = 'Aucun article trouvé.' }: ArticleGridProps) {
+  const [visible, setVisible] = useState(PAGE_SIZE)
+
   if (!articles || articles.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-24 text-center">
@@ -16,11 +23,27 @@ export function ArticleGrid({ articles, emptyMessage = 'Aucun article trouvé.' 
     )
   }
 
+  const shown = articles.slice(0, visible)
+  const hasMore = visible < articles.length
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      {articles.map((article) => (
-        <ArticleCard key={article._id} article={article} />
-      ))}
+    <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {shown.map((article) => (
+          <ArticleCard key={article._id} article={article} />
+        ))}
+      </div>
+
+      {hasMore && (
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={() => setVisible((v) => v + PAGE_SIZE)}
+            className="px-6 py-3 rounded-xl font-semibold text-sm border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white transition-all duration-150"
+          >
+            Charger plus ({articles.length - visible} restants)
+          </button>
+        </div>
+      )}
     </div>
   )
 }
