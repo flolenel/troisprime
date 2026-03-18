@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
+import Image from 'next/image'
 
 function LoginForm() {
   const [password, setPassword] = useState('')
@@ -46,14 +47,14 @@ function LoginForm() {
     <div className="min-h-screen bg-brand-gray flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         {/* Logo */}
-        <div className="text-center mb-10">
-          <div className="inline-block mb-4">
-            <span className="text-4xl font-extrabold">
-              <span className="text-orouge">Trois</span>
-              <span className="text-brand-green">Prime</span>
-            </span>
-          </div>
-          <p className="text-gray-400 text-sm">Veille & Partage interne</p>
+        <div className="flex justify-center mb-10">
+          <Image
+            src="/logo-desktop.png"
+            alt="TroisPrime"
+            width={200}
+            height={80}
+            className="object-contain"
+          />
         </div>
 
         {/* Card */}
