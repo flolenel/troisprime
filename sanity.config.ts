@@ -32,10 +32,10 @@ export default defineConfig({
                           .filter('_type == "article" && category == "news"')
                       ),
                     S.listItem()
-                      .title("Part'")
+                      .title("Presta")
                       .child(
                         S.documentTypeList('article')
-                          .title("Part'")
+                          .title("Presta")
                           .filter('_type == "article" && category == "part"')
                       ),
                     S.listItem()

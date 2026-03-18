@@ -20,7 +20,7 @@ export const CATEGORY_CONFIG: Record<CategoryId, {
   },
   part: {
     id: 'part',
-    label: "Part'",
+    label: "Presta",
     description: "Parce que sans de bons partenaires on serait moins bons ! Vous trouverez ici des studios, des artistes, des dévs, et bien d'autres presta à découvrir !",
     path: '/part',
     color: '#7C3AED',
