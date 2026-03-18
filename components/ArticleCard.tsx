@@ -48,48 +48,13 @@ export function ArticleCard({ article, onTagClick }: ArticleCardProps) {
 
   return (
     <article
-      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col"
+      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-row"
       style={{ borderLeft: `4px solid ${config?.color || '#FC431F'}` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Image */}
-      <Link href={`/articles/${slug.current}`} className="block relative aspect-video overflow-hidden bg-brand-gray">
-        {currentImage?.asset ? (
-          <Image
-            src={urlFor(currentImage).width(640).height(360).fit('crop').url()}
-            alt={currentImage.alt || title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          />
-        ) : (
-          <div
-            className="w-full h-full flex items-center justify-center"
-            style={{ backgroundColor: config?.lightColor || '#F1F1F1' }}
-          >
-            <span className="text-4xl opacity-30">📄</span>
-          </div>
-        )}
-
-        {/* Indicateur images multiples */}
-        {hasMultipleImages && (
-          <div className="absolute bottom-2 right-2 flex gap-1">
-            {images.map((_, i) => (
-              <span
-                key={i}
-                className="w-1.5 h-1.5 rounded-full transition-all duration-300"
-                style={{
-                  backgroundColor: i === imageIndex ? 'white' : 'rgba(255,255,255,0.5)',
-                }}
-              />
-            ))}
-          </div>
-        )}
-      </Link>
-
       {/* Contenu */}
-      <div className="p-4 flex flex-col flex-1 gap-2">
+      <div className="p-4 flex flex-col flex-1 gap-2 min-w-0">
         {/* Badge + Date */}
         <div className="flex items-center justify-between gap-2">
           <CategoryBadge category={category} />
@@ -104,7 +69,7 @@ export function ArticleCard({ article, onTagClick }: ArticleCardProps) {
         </Link>
 
         {/* Description */}
-        <p className="text-sm text-gray-500 leading-relaxed line-clamp-3 flex-1">
+        <p className="text-sm text-gray-500 leading-relaxed line-clamp-2 flex-1">
           {description}
         </p>
 
@@ -130,6 +95,41 @@ export function ArticleCard({ article, onTagClick }: ArticleCardProps) {
           </div>
         )}
       </div>
+
+      {/* Image */}
+      <Link href={`/articles/${slug.current}`} className="block relative w-48 shrink-0 overflow-hidden bg-brand-gray">
+        {currentImage?.asset ? (
+          <Image
+            src={urlFor(currentImage).width(300).height(200).fit('crop').url()}
+            alt={currentImage.alt || title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="192px"
+          />
+        ) : (
+          <div
+            className="w-full h-full flex items-center justify-center"
+            style={{ backgroundColor: config?.lightColor || '#F1F1F1' }}
+          >
+            <span className="text-4xl opacity-30">📄</span>
+          </div>
+        )}
+
+        {/* Indicateur images multiples */}
+        {hasMultipleImages && (
+          <div className="absolute bottom-2 right-2 flex gap-1">
+            {images.map((_, i) => (
+              <span
+                key={i}
+                className="w-1.5 h-1.5 rounded-full transition-all duration-300"
+                style={{
+                  backgroundColor: i === imageIndex ? 'white' : 'rgba(255,255,255,0.5)',
+                }}
+              />
+            ))}
+          </div>
+        )}
+      </Link>
     </article>
   )
 }

@@ -28,7 +28,7 @@ export function ArticleGrid({ articles, emptyMessage = 'Aucun article trouvé.' 
 
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="flex flex-col gap-4">
         {shown.map((article) => (
           <ArticleCard key={article._id} article={article} />
         ))}
